@@ -61,7 +61,7 @@ const Launching = () => {
               <FaSquareInstagram size={30} color="#c6c6c6" />
             </a>
             <a
-              href="https://www.youtube.com/_animhub"
+              href="https://www.youtube.com/@_animhub"
               target="_blank"
               rel="noreferrer"
             >
