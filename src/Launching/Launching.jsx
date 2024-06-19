@@ -69,6 +69,7 @@ const Launching = () => {
             </a>
           </div>
         </div>
+        <div className="absolute bottom-0 h-[100px] w-full bg-green rounded-full z-10 blur-[128px] animate-blinkBackground"></div>
       </section>
     </>
   );
