@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="dark">
-      {isEditorPage || isComponentPage ? <></> : <Navbar />}
+      {/* {isEditorPage || isComponentPage ? <></> : <Navbar />} */}
       {/* <Navbar /> */}
       <Routes>
         {routesData.map((route, index) => (
@@ -47,7 +47,7 @@ function App() {
           />
         ))}
       </Routes>
-      {isEditorPage || isComponentPage ? <></> : <Footer />}
+      {/* {isEditorPage || isComponentPage ? <></> : <Footer />} */}
     </div>
   );
 }
