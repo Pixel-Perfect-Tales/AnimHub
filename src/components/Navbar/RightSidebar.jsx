@@ -95,11 +95,11 @@ const RightSidebar = ({ isRightSidebarOpen, setIsRightSidebarOpen }) => {
                       <div className="flex flex-col items-left justify-start w-full">
                         <Link
                           to="/dashboard"
-                          className="text-white text-xl font-bold"
+                          className="text-white text-xl max-sm:text-lg max-sm:font-semibold font-bold"
                         >
                           {userData?.username}
                         </Link>
-                        <h3 className="text-white text-sm font-bold">
+                        <h3 className="text-white text-sm font-bold max-sm:font-medium">
                           See your profile
                         </h3>
                       </div>
@@ -110,7 +110,7 @@ const RightSidebar = ({ isRightSidebarOpen, setIsRightSidebarOpen }) => {
                         }}
                         className="flex justify-end items-end w-full p-2"
                       >
-                        <PiSignOutBold className="text-[#c6c6c6] text-4xl" />
+                        <PiSignOutBold className="text-[#c6c6c6] text-4xl max-sm:text-2xl" />
                       </button>
                     </div>
                     {/* <hr className="border-[#c6c6c6] border-1" /> */}
@@ -126,9 +126,9 @@ const RightSidebar = ({ isRightSidebarOpen, setIsRightSidebarOpen }) => {
                               item.special
                                 ? "hover:bg-[#5a93ee]"
                                 : "hover:bg-[#2b2b2b]"
-                            } p-4 rounded-xl flex justify-start items-center gap-6 text-left focus:outline-none`}
+                            } p-4 rounded-xl flex justify-start items-center gap-6 text-left max-sm:text-md focus:outline-none`}
                           >
-                            {item.icon && <item.icon className="text-2xl" />}
+                            {item.icon && <item.icon className="text-2xl max-sm:text-xl" />}
                             {item.title}
                           </button>
                         </li>
@@ -143,7 +143,7 @@ const RightSidebar = ({ isRightSidebarOpen, setIsRightSidebarOpen }) => {
                               className={`w-full p-4 rounded-xl flex flex-col justify-start items-start gap-1 text-left focus:outline-none`}
                             >
                               {column.icon && (
-                                <column.icon className="text-2xl" />
+                                <column.icon className="text-2xl max-sm:text-lg" />
                               )}
                               {column.title}
                             </button>

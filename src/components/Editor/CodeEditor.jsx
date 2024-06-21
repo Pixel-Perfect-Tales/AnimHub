@@ -167,14 +167,14 @@ const CodeEditor = () => {
   };
 
   return (
-    <div className="w-full h-full flex items-center justify-center gap-[15px]">
-      <div className="flex flex-col w-1/2 h-full gap-[5px]">
+    <div className="w-full h-full flex max-sm:flex-wrap items-center justify-center gap-[15px] max-sm:gap-[5px]">
+      <div className="flex flex-col w-1/2 max-sm:w-full  h-full gap-[5px]">
         <div className="flex flex-row  bg-[#292929] rounded-t-xl px-2 py-1 justify-start items-center">
           {languages.map((fileLang, idx) => {
             return (
               <button
                 key={idx}
-                className={`p-1 mx-2 text-[18px] font-[600] text-[#fff] ${
+                className={`p-1 mx-2 max-sm:m-0 text-[18px] max-sm:text-[14px] font-[600] text-[#fff] ${
                   activeFile == fileLang
                     ? "text-opacity-100"
                     : "text-opacity-40 hover:text-opacity-100"
@@ -188,7 +188,7 @@ const CodeEditor = () => {
             );
           })}
           <select
-            className="ml-auto mr-[30px] px-[10px] h-[90%] appearance-none focus:outline-none rounded-lg"
+            className="ml-auto mr-[30px] px-[10px] max-sm:px-0 h-[90%] appearance-none focus:outline-none rounded-lg"
             onChange={(e) => setTheme(e.target.value)}
           >
             {editorThemes.map((themeName, idx) => {
@@ -226,6 +226,7 @@ const CodeEditor = () => {
             fontSize: 16,
             automaticLayout: true,
             fontWeight: 700,
+            
             // Add any additional editor options here
           }}
           value={
@@ -244,7 +245,7 @@ const CodeEditor = () => {
           }}
         />
       </div>
-      <div className="flex flex-col w-1/2 h-full gap-[15px]">
+      <div className="flex flex-col w-1/2 max-sm:w-full h-full gap-[15px]">
         <CodeOutput sourceCode={documentContents} />
         <ComponentInfo />
       </div>

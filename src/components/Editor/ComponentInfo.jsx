@@ -84,12 +84,12 @@ const ComponentInfo = () => {
           title="UserInfo"
         />
       </div> */}
-      <div className="flex flex-col flex-grow gap-[20px] items-center p-[40px] rounded-t-[15px] bg-[#151515]">
-        <div className="w-full flex border-[#f00] gap-[20px] items-center">
-          <div className="rounded-full w-[50px]">
+      <div className="flex flex-col flex-grow gap-[20px] max-sm:gap-[20px] items-center p-[40px] max-sm:p-[2px] rounded-t-[15px] bg-[#151515]">
+        <div className="w-full flex max-sm:justify-center border-[#f00] gap-[20px] max-sm:gap-[5px] items-center">
+          <div className="rounded-full w-[50px] max-sm:w-[100px]">
             <Link
               to={`/profile/${userData.username}`}
-              className="font-[400] text-[14px] text-[#FFA31A]"
+              className="font-[400] text-[14px] max-sm:text-[5px] text-[#FFA31A]"
             >
               <img
                 src={photoURL || dummyProfileImg}
@@ -98,16 +98,16 @@ const ComponentInfo = () => {
               />
             </Link>
           </div>
-          <div className="flex-grow">
+          <div className="lg:flex-grow">
             <Link
               to={`/profile/${userData.username}`}
               className="font-[400] text-[14px] text-[#FFA31A]"
             >
-              <h1 className="font-[600] text-[20px] text-[#ffffff]">
+              <h1 className="font-[600] text-[20px] max-sm:text-[13px] text-[#ffffff]">
                 {displayName}
               </h1>
 
-              <h2>{userData.username}</h2>
+              <h2 className="max-sm:text-[12px]">{userData.username}</h2>
             </Link>
           </div>
           <AiFillGithub
@@ -116,8 +116,8 @@ const ComponentInfo = () => {
           />
         </div>
         <hr className="w-[90%] border border-[#555]" />
-        <div className="w-full flex justify-between items-center gap-[10px]">
-          <h1 className="text-[25px] font-[700] leading-none">
+        <div className="w-full flex max-sm:flex-wrap max-sm:justify-center justify-between items-center gap-[10px] max-sm:gap-2">
+          <h1 className="text-[25px] max-sm:text-[20px] font-[700] leading-none">
             {langCategory.category}
             <br />
             {tags.map((tag) => (
@@ -129,24 +129,24 @@ const ComponentInfo = () => {
             <input
               id="tag-input"
               type="text"
-              className="w-[100px] h-[30px] bg-[#151515] border border-[#555] rounded-[5px] text-[#aaa] font-[400] text-[15px] px-[10px]"
+              className="w-[100px] max-sm:w-[70px] h-[30px] bg-[#151515] border border-[#555] rounded-[5px] text-[#aaa] font-[400] text-[15px] max-sm:text-[12px] px-[10px] max-sm:px-[5px]"
               placeholder="Add Tags"
               onKeyDown={addTags}
             />
           </h1>
-          <h2>
+          <h2 className="max-sm:text-sm">
             <span className="flex items-center gap-[10px] text-[#786666] font-[700]">
               <FaRegCalendarCheck />
               {formatCustomDate(Date.now())}
             </span>
           </h2>
         </div>
-        <div className="flex flex-col justify-center items-start text-[#C6C6C6] gap-2 font-medium">
-          <div className="flex justify-center items-start gap-2 px-8">
-            <FaScaleBalanced className="text-2xl " />
+        <div className="flex flex-col justify-center items-start text-[#C6C6C6] gap-2 font-medium ">
+          <div className="flex justify-center items-start max-sm:items-center gap-2 px-8 max-sm:px-2">
+            <FaScaleBalanced className="text-2xl max-sm:text-xs " />
             MIT License
           </div>
-          <div className="bg-[#292929] px-6 py-4 rounded-md h-[300px] min-h-[200px] overflow-scroll ">
+          <div className="bg-[#292929] max-sm:text-xs px-6 max-sm:px-0 py-4 max-sm:py-1 rounded-md lg:h-[300px] lg:min-h-[200px] overflow-scroll max-sm:font-thin">
             <p>
               Copyright - {new Date(Date.now()).getFullYear()}{" "}
               {userData.username} ({displayName}){" "}

@@ -1,5 +1,5 @@
 import { AiFillTwitterCircle, AiFillGithub } from "react-icons/ai";
-import { BsDiscord } from "react-icons/bs";
+import { BsDiscord, BsInstagram } from "react-icons/bs";
 export const quickLinks = [
   {
     name: "Home",
@@ -66,11 +66,14 @@ export const openSourceStuff = [
 export const social = [
   {
     comp: AiFillTwitterCircle,
+    link : "https://x.com/_animhub"
   },
   {
     comp: AiFillGithub,
+     link : "https://github.com/Pixel-Perfect-Tales"
   },
   {
-    comp: BsDiscord,
+    comp: BsInstagram,
+     link : "https://www.instagram.com/_animhub/"
   },
 ];

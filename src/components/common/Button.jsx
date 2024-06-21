@@ -18,7 +18,7 @@ const Button = ({
   return (
     <button
       className={`${primary ? "bg-[#FFA31A]" : "bg-[#007bff]"}
-      px-[${padx}] py-[${pady}] text-[${color}] font-[600] text-[${fontSize}] rounded-md tracking-wider  disabled:bg-[#2f2f2f] disabled:text-[#969696] mt-4 disabled:cursor-not-allowed`}
+      px-[${padx}] py-[${pady}] text-[${color}] font-[600] text-[${fontSize}] max-sm:text-sm rounded-md tracking-wider  disabled:bg-[#2f2f2f] disabled:text-[#969696] mt-4 disabled:cursor-not-allowed`}
       style={buttonStyle}
       onClick={onClick}
       disabled={disabled}

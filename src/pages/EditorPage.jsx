@@ -118,7 +118,7 @@ const EditorPage = () => {
           </div>
         </div>
         <div
-          className="w-full h-full flex justify-between items-center px-12"
+          className="w-full h-full flex max-sm:flex-col justify-between items-center px-12"
           style={{ height: "calc(100vh - 64px)" }}
         >
           <CodeEditor />

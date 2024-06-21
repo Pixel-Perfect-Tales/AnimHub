@@ -3,5 +3,5 @@ run:
 
 push: 
 	   git add .
-	   git commit -m "responsive done for navbar"
-	   git push -u origin dev-test
+	   git commit -m "Did some changes"
+	   git push -u origin new-changes
